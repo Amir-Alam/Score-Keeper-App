@@ -1,0 +1,256 @@
+/* 
+
+* {
+  box-sizing: border-box;
+}
+
+.countdown {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.time-section {
+  text-align: center;
+  font-size: 30px;
+}
+
+.time-group {
+  display: flex;
+  gap: 10px;
+}
+
+.time-segment {
+  display: block;
+  font-size: 100px;
+  font-weight: 900;
+  width: 100px;
+}
+
+.segment-display {
+  position: relative;
+  height: 100%;
+}
+
+.segment-display__top,
+.segment-display__bottom {
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.segment-display__top {
+  line-height: 1.5;
+  color: #eee;
+  background-color: #111;
+}
+
+.segment-display__bottom {
+  line-height: 0;
+  color: #fff;
+  background-color: #333;
+}
+
+.segment-overlay {
+  position: absolute;
+  top: 0;
+  perspective: 400px;
+  height: 100%;
+  width: 100px;
+}
+
+.segment-overlay__top,
+.segment-overlay__bottom {
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+}
+
+.segment-overlay__top {
+  top: 0;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #111;
+  transform-origin: bottom;
+}
+
+.segment-overlay__bottom {
+  bottom: 0;
+  line-height: 0;
+  color: #eee;
+  background-color: #333;
+  border-top: 2px solid black;
+  transform-origin: top;
+}
+
+.segment-overlay.flip .segment-overlay__top {
+  animation: flip-top 0.8s linear;
+}
+
+.segment-overlay.flip .segment-overlay__bottom {
+  animation: flip-bottom 0.8s linear;
+}
+
+@keyframes flip-top {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50%,
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-bottom {
+  0%,
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown {
+  width: 100%;
+  max-width: 2000px;
+  display: flex;
+  gap: 50px;
+  font-family: sans-serif;
+  justify-content: center;
+
+  top: 700px;
+  right: 200px;
+}
+
+.time-section {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.time-section p {
+  font-size: 24px;
+  color: #666;
+  font-weight: bold;
+}
+
+.time-group {
+  display: flex;
+  gap: 10px;
+}
+
+.time-segment {
+  display: block;
+  font-size: 100px;
+  font-weight: 900;
+  width: 100px;
+}
+
+.segment-display {
+  position: relative;
+  height: 100%;
+}
+
+.segment-display__top,
+.segment-display__bottom {
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.segment-display__top {
+  line-height: 1.5;
+  color: #eee;
+  background-color: #111;
+}
+
+.segment-display__bottom {
+  line-height: 0;
+  color: #fff;
+  background-color: #333;
+}
+
+.segment-overlay {
+  position: absolute;
+  top: 0;
+  perspective: 400px;
+  height: 100%;
+  width: 100px;
+}
+
+.segment-overlay__top,
+.segment-overlay__bottom {
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+}
+
+.segment-overlay__top {
+  top: 0;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #111;
+  transform-origin: bottom;
+}
+
+.segment-overlay__bottom {
+  bottom: 0;
+  line-height: 0;
+  color: #eee;
+  background-color: #333;
+  border-top: 2px solid black;
+  transform-origin: top;
+}
+
+.segment-overlay.flip .segment-overlay__top {
+  animation: flip-top 0.8s linear;
+}
+
+.segment-overlay.flip .segment-overlay__bottom {
+  animation: flip-bottom 0.8s linear;
+}
+
+@keyframes flip-top {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50%,
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-bottom {
+  0%,
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}

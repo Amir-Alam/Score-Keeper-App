@@ -1,0 +1,220 @@
+/*index.css*/
+
+body {
+  background-color: hsla(267, 92%, 85%, 0.756);
+}
+
+/* Center the title on the page */
+.team-name {
+  text-align: center; /* Center the title horizontally */
+  font-size: 3rem; /* Increase the font size for a more impactful look */
+  font-weight: bold; /* Make the text bold */
+  margin-bottom: 30px;
+  margin-top: 10px; /* Add some space above and below the title */
+  background: linear-gradient(
+    90deg,
+    #000000,
+    #080808
+  ); /* Apply a gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add a subtle shadow for depth */
+  letter-spacing: 2px; /* Add spacing between letters */
+  animation: glow 1.5s infinite; /* Add a glowing animation */
+}
+
+/* Style the section containing the title and inputs */
+.form-section {
+  background-color: hsl(0, 79%, 89%); /* Light grey background */
+  padding: 20px; /* Add padding inside the div */
+  border-radius: 10px; /* Rounded corners for a smoother look */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column; /* Stack title and inputs vertically */
+  align-items: center; /* Center the title and inputs */
+  margin-top: 30px; /* Space above the section */
+  margin-bottom: 30px; /* Space below the section */
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the div containing both team inputs side by side */
+.team-inputs {
+  display: flex;
+  gap: 20px; /* Space between the input fields */
+  margin-bottom: 20px; /* Add space below the inputs */
+}
+
+/* Style individual input fields */
+.team-inputs div {
+  display: flex;
+  flex-direction: column; /* Stack label and input vertically */
+  align-items: flex-start; /* Center align label and input */
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 350px; /* Set width for input fields */
+  margin-top: 5px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+label {
+  font-size: 1rem;
+}
+
+/* Add some additional styling to improve appearance */
+.form-section {
+  margin-top: 30px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.vs-image {
+  width: 110px;
+}
+
+/* Toggle Button timer CSS */
+/* Container for the radio buttons */
+/* Style the container for the timer selection */
+.select-timer {
+  background-color: hsl(56, 97%, 88%); /* Light grey background */
+  padding: 20px; /* Add padding inside the div */
+  border: 1px solid hsl(56, 97%, 88%);
+  border-radius: 10px; /* Rounded corners for a smoother look */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); /* Optional: subtle shadow for depth */
+  display: flex; /* Flexbox for layout */
+  flex-wrap: wrap; /* Wrap the items to the next line if needed */
+  gap: 10px; /* Space between radio buttons and labels */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  margin-top: 20px; /* Space above the container */
+  max-width: 1250px; /* Optional: constrain the width */
+  margin-left: auto;
+  margin-right: auto; /* Center the div on the page */
+}
+
+/* Hide the default radio button appearance */
+input[type="radio"] {
+  display: none;
+}
+
+/* Style the labels to look like buttons */
+.select-timer label {
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Change background color and border on hover */
+.select-timer label:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Style the selected option */
+input[type="radio"]:checked + label {
+  background-color: #1984f8;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+  transform: scale(1.1);
+}
+
+/* Style the "Choose the Match Duration" text */
+.select-timer p {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Image card props css */
+
+.sports-image {
+  background: hwb(173 84% 2%);
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sports-image.selected {
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 15px hsl(0, 0%, 0%, 0.2);
+}
+
+.sports {
+  width: 150px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.sports-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 15px hsl(0, 0%, 0%, 0.2);
+  cursor: pointer;
+}
+
+.sports-image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.start-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.start-button button {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #eba242;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.start-button button:hover {
+  background-color: #10c47f;
+  transform: scale(1.05);
+}
+
+.start-button button:active {
+  background-color: #004494;
+  transform: scale(0.98);
+}
+
+.sports-image-grid {
+  margin-top: 10px; /* Increase the margin-top for vertical spacing */
+}
